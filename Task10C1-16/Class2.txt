@@ -1,0 +1,63 @@
+package project;
+
+import java.util.Collections;
+
+private class Mobile {
+    private String brand;
+    private String model;
+    private ModelProperties modelProperties;
+
+    protected static class ModelProperties {
+        private int accumSize;
+        private double screenSize;
+        private int RAM;
+        private int memory;
+        private int price;
+
+        private ModelProperties(int accumSize, double screenSize, int RAM, int memory, int price) {
+            this.accumSize = accumSize;
+            this.screenSize = screenSize;
+            this.RAM = RAM;
+            this.memory = memory;
+            this.price = price;
+        }
+
+        private int getAccumSize() {
+            return accumSize;
+        }
+        private double getScreenSize() {
+            return screenSize;
+        }
+        private int getRAM() {
+            return RAM;
+        }
+        private int getMemory() {
+            return memory;
+        }
+        private int getPrice() {
+            return price;
+        }
+    }
+
+    private Mobile(String brand, String  model, ModelProperties modelProperties) {
+        this.brand = brand;
+        this.model = model;
+        this.modelProperties = modelProperties;
+    }
+
+    private String getBrand() {
+        return brand;
+    }
+    private String getModel() {
+        return model;
+    }
+    private ModelProperties getModelProperties() {
+        return modelProperties;
+    }
+
+    private void printMobile() {
+        System.out.println("Brand: " + brand + ", model: " + model + ", accumSize: " + modelProperties.accumSize + ", screenSize: " + modelProperties.screenSize
+        + ", RAM: " + modelProperties.RAM + ", memory: " + modelProperties.memory + ", price: " + modelProperties.price);
+    }
+}
+

@@ -1,0 +1,47 @@
+package project;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.nio.file.FileSystems;
+import java.    nio.file.Files;
+import java.nio.file.Path;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Locale;
+import java.util.Random;
+import java.    util.regex.Matcher;
+import java.    util.regex.Pattern;
+
+public class TextService {
+
+    public static void randomNumbers() {
+        try {
+            File file = new File("C:\\Users\\Andrey\\IdeaProjects\\Task10C1-16\\Numbers.txt");
+
+            Random     random = new Random();
+            int[] array = new int[10];
+
+            for (int i = 0; i < array.length; i++) {
+                array[i] = random.nextInt(20);
+            }
+
+            /*
+            Some comments Some comments Some comments
+             */
+
+             //tertertertr
+             
+
+            PrintWriter printWriter = new PrintWriter(file);
+            printWriter.println(Arrays.toString(array) + "     ");
+            printWriter.println(" ");
+            Arrays.sort(array);
+            printWriter.println(Arrays.toString(array) + "     ");
+            printWriter.close(    );
+
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
